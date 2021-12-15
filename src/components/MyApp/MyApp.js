@@ -3,6 +3,7 @@ import * as R from 'ramda'
 import * as _ from 'lodash'
 import Maybe from "../../monads/Maybe/Maybe";
 import Either from "../../monads/Either/Either";
+import {when, lt, always, __, complement, isNil, ifElse, is, partial, curry, toLower, split, join} from 'ramda'
 
 export const MyApp = () => {
 
@@ -18,30 +19,37 @@ export const MyApp = () => {
 //     Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    const checkValue = val =>
+        ifElse(complement(isNil(__)),
+            (val) => Either.right(val),
+            () => Either.left('Null or Undefined values are detected!: '))(val)
 
-    const checkValue = val => val ? Either.right(val) : Either.left('Null or Undefined values are detected!: ')
-    const typeCheck = val => R.is(String, val) ? Either.right(val) : Either.left('Type error!')
+    const typeCheck = val =>
+        ifElse(is(String, __),
+            (val) => Either.right(val),
+            () => Either.left('Type error!'))(val)
 
-    const alphabet = () => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const alphabet = () =>
+        ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     const isLetter = (alphabet, letter) => alphabet.some(item => item === letter.toLowerCase())
-    const isLetterWithAlphabet = R.partial(isLetter, [alphabet()])
+    const isLetterWithAlphabet = partial(isLetter, [alphabet()])
 
     const getLetterIndex = (alphabet, val) => val.map(letter => alphabet.indexOf(letter) + 1)
-    const getLetterIndexWithAlphabet = R.partial(getLetterIndex, [alphabet()])
+    const getLetterIndexWithAlphabet = partial(getLetterIndex, [alphabet()])
 
-    const lettersFilter = R.curry((isLetter, val) => val.filter(item => isLetter(item)))
+    const lettersFilter = curry((isLetter, val) => val.filter(item => isLetter(item)))
     const curriedLettersFilter = lettersFilter(isLetterWithAlphabet)
 
     const my_alphabetPosition = (text) =>
         Maybe.fromNullable(text)
             .chain(checkValue)
             .chain(typeCheck)
-            .map(R.toLower)
-            .map(R.split(""))
+            .map(toLower)
+            .map(split(""))
             .map(curriedLettersFilter)
             .map(getLetterIndexWithAlphabet)
-            .map(R.join(" "))
+            .map(join(" "))
 
     console.log(my_alphabetPosition("The sunset sets at twelve o' clock.").orElse(console.error));
 
@@ -58,6 +66,12 @@ export const MyApp = () => {
     //         .join(' ');
     // }
     //
+
+    // const isTrueTen = val => R.ifElse(R.equals(R.__, 10), () => "true", () => "false")(val)
+    // console.log(isTrueTen(11));
+
+    // const forever21 = age => R.ifElse(R.gte(__, 21), (v) => v, R.inc)(age)
+    // console.log(forever21(60));
 
     return (
         <h1>Included!</h1>
