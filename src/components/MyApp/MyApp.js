@@ -38,8 +38,7 @@ export const MyApp = () => {
     const getLetterIndex = (alphabet, val) => val.map(letter => alphabet.indexOf(letter) + 1)
     const getLetterIndexWithAlphabet = partial(getLetterIndex, [alphabet()])
 
-    const lettersFilter = curry((isLetter, val) => val.filter(item => isLetter(item)))
-    const curriedLettersFilter = lettersFilter(isLetterWithAlphabet)
+    const lettersFilter = curry((isLetter, val) => val.filter(item => isLetter(item)))(isLetterWithAlphabet)
 
     const my_alphabetPosition = (text) =>
         Maybe.fromNullable(text)
@@ -47,7 +46,7 @@ export const MyApp = () => {
             .chain(typeCheck)
             .map(toLower)
             .map(split(""))
-            .map(curriedLettersFilter)
+            .map(lettersFilter)
             .map(getLetterIndexWithAlphabet)
             .map(join(" "))
 
@@ -72,6 +71,15 @@ export const MyApp = () => {
 
     // const forever21 = age => R.ifElse(R.gte(__, 21), (v) => v, R.inc)(age)
     // console.log(forever21(60));
+
+    // const sayHi = (val) => `hi ${__} !`("Mike")
+    // console.log(sayHi());
+
+    // const adding = curry((a, b, c) => a + b + c)(__, 2, 0)
+    // // const addingTwoLastArgs = adding(__, 2, 3)
+    // // console.log(addingTwoLastArgs(15));
+    // console.log(adding(15));
+
 
     return (
         <h1>Included!</h1>
