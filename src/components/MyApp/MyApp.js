@@ -3,7 +3,7 @@ import * as R from 'ramda'
 import * as _ from 'lodash'
 import Maybe from "../../monads/Maybe/Maybe";
 import Either from "../../monads/Either/Either";
-import {when, lt, always, __, complement, isNil, ifElse, is, partial, curry, toLower, split, join} from 'ramda'
+import {when, lt, always, __, complement, isNil, ifElse, is, partial, curry, toLower, split, join, tap} from 'ramda'
 
 export const MyApp = () => {
 
@@ -50,6 +50,7 @@ export const MyApp = () => {
             .map(getLetterIndexWithAlphabet)
             .map(join(" "))
 
+
     console.log(my_alphabetPosition("The sunset sets at twelve o' clock.").orElse(console.error));
 
     // const arr = [2, 4, 5, 7, 8, 9, 10]
@@ -69,7 +70,7 @@ export const MyApp = () => {
     // const isTrueTen = val => R.ifElse(R.equals(R.__, 10), () => "true", () => "false")(val)
     // console.log(isTrueTen(11));
 
-    // const forever21 = age => R.ifElse(R.gte(__, 21), (v) => v, R.inc)(age)
+    // const forever21 = R.ifElse(R.gte(__, 21), (v) => v, R.inc)
     // console.log(forever21(60));
 
     // const sayHi = (val) => `hi ${__} !`("Mike")
@@ -79,6 +80,26 @@ export const MyApp = () => {
     // // const addingTwoLastArgs = adding(__, 2, 3)
     // // console.log(addingTwoLastArgs(15));
     // console.log(adding(15));
+
+    // x > 5 && x < 10
+    // R.both(R.gt(x, 5), R.lt(x, 10))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     Complete the method/function so that it converts dash/underscore delimited words into camel casing.
+//     The first word within the output should be capitalized only if the original word
+//     was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+//
+//     Examples
+//     "the-stealth-warrior" gets converted to "theStealthWarrior"
+//     "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+    const toCamelCase = str =>
+        str.split(/[^a-zA-Z]/gi)
+            .map((w, i) => i > 0 ? w[0].toUpperCase() + w.substring(1) : w)
+            .join("")
+
+
+    console.log(toCamelCase("the-stealth-warrior"));
 
 
     return (
