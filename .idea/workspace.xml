@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="2 Updated prev task!">
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="toCamelCase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
     </list>
@@ -47,7 +47,8 @@
       <workItem from="1639414953146" duration="835000" />
       <workItem from="1639488611543" duration="9732000" />
       <workItem from="1639575298759" duration="7418000" />
-      <workItem from="1639659730529" duration="8352000" />
+      <workItem from="1639659730529" duration="8740000" />
+      <workItem from="1639749271640" duration="4016000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -63,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639583846683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="toCamelCase">
+      <created>1639672785035</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639672785035</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +92,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated prev task!" />
     <MESSAGE value="2 Updated prev task!" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 Updated prev task!" />
+    <MESSAGE value="toCamelCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="toCamelCase" />
   </component>
 </project>
