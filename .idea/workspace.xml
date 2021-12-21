@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="maskify">
-      <change afterPath="$PROJECT_DIR$/babel.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fakeDB/fakeDB.js" afterDir="false" />
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="TypeError: Cannot set property 'innerHTML' of null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1639749271640" duration="4670000" />
       <workItem from="1640008705668" duration="113000" />
       <workItem from="1640012077180" duration="1065000" />
-      <workItem from="1640095172373" duration="4347000" />
+      <workItem from="1640095172373" duration="5267000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -125,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639753368105</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TypeError: Cannot set property 'innerHTML' of null">
+      <created>1640099684737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640099684737</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +152,7 @@
     <MESSAGE value="2 Updated prev task!" />
     <MESSAGE value="toCamelCase" />
     <MESSAGE value="maskify" />
-    <option name="LAST_COMMIT_MESSAGE" value="maskify" />
+    <MESSAGE value="TypeError: Cannot set property 'innerHTML' of null" />
+    <option name="LAST_COMMIT_MESSAGE" value="TypeError: Cannot set property 'innerHTML' of null" />
   </component>
 </project>
