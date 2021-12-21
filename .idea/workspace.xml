@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="toCamelCase">
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="maskify">
+      <change afterPath="$PROJECT_DIR$/babel.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fakeDB/fakeDB.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +36,48 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../my-fp-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Jest.showMyStudent.returns clean input (1)">
+    <configuration name="showMyStudent.returns clean input (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" />
+      <test-names>
+        <test-name value="showMyStudent" />
+        <test-name value="returns clean input" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="showMyStudent.returns clean input" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.jest.js" />
+      <test-names>
+        <test-name value="showMyStudent" />
+        <test-name value="returns clean input" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.showMyStudent.returns clean input (1)" />
+        <item itemvalue="Jest.showMyStudent.returns clean input" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,7 +92,10 @@
       <workItem from="1639488611543" duration="9732000" />
       <workItem from="1639575298759" duration="7418000" />
       <workItem from="1639659730529" duration="8740000" />
-      <workItem from="1639749271640" duration="4016000" />
+      <workItem from="1639749271640" duration="4670000" />
+      <workItem from="1640008705668" duration="113000" />
+      <workItem from="1640012077180" duration="1065000" />
+      <workItem from="1640095172373" duration="4347000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -71,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639672785035</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="maskify">
+      <created>1639753368105</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639753368105</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +147,7 @@
     <MESSAGE value="Updated prev task!" />
     <MESSAGE value="2 Updated prev task!" />
     <MESSAGE value="toCamelCase" />
-    <option name="LAST_COMMIT_MESSAGE" value="toCamelCase" />
+    <MESSAGE value="maskify" />
+    <option name="LAST_COMMIT_MESSAGE" value="maskify" />
   </component>
 </project>
