@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="Updated! TypeError: Cannot set property 'innerHTML' of null">
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="toCamelCase Advanced">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <workItem from="1639749271640" duration="4670000" />
       <workItem from="1640008705668" duration="113000" />
       <workItem from="1640012077180" duration="1065000" />
-      <workItem from="1640095172373" duration="7178000" />
+      <workItem from="1640095172373" duration="11502000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -133,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640100612862</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="toCamelCase Advanced">
+      <created>1640102490144</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640102490144</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +164,7 @@
     <MESSAGE value="maskify" />
     <MESSAGE value="TypeError: Cannot set property 'innerHTML' of null" />
     <MESSAGE value="Updated! TypeError: Cannot set property 'innerHTML' of null" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated! TypeError: Cannot set property 'innerHTML' of null" />
+    <MESSAGE value="toCamelCase Advanced" />
+    <option name="LAST_COMMIT_MESSAGE" value="toCamelCase Advanced" />
   </component>
 </project>

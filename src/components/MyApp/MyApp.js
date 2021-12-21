@@ -103,7 +103,7 @@ export const MyApp = () => {
         str.replace(/[_-]\w/gi, ch => ch[1].toUpperCase());
 
 
-    console.log(toCamelCase("The-stealth-warrior"));
+    // console.log(toCamelCase("The-stealth-warrior"));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
@@ -125,7 +125,63 @@ export const MyApp = () => {
             .replace(/./g, '#') + cc.slice(-4);
 
 
-    console.log(maskify("4556364607935616"));
+    // console.log(maskify("4556364607935616"));
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     You probably know the "like" system from Facebook and other pages.
+//     People can "like" blog posts, pictures or other items.
+//     We want to create the text that should be displayed next to such an item.
+//
+//         Implement the function which takes an array containing the names of people that like an item.
+//         It must return the display text as shown in the examples:
+//
+//             []                                -->  "no one likes this"
+//             ["Peter"]                         -->  "Peter likes this"
+//             ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+//             ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+//             ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+    const likes = names => {
+        let res = ``;
+        if (names.length >= 4) {
+            res = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+        }
+        if (names.length === 3) {
+            res = `${names[0]}, ${names[1]} and ${names[2]} like this`
+        }
+        if (names.length === 2) {
+            res = `${names[0]} and ${names[1]} like this`
+        }
+        if (names.length === 1) {
+            res = `${names[0]} likes this`
+        }
+        if (names.length === 0) {
+            res = `no one likes this`
+        }
+        return res
+    }
+
+    // console.log("likes = ", likes(["Alex", "Jacob", "Mark", "Max"]));
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+//     Implement a function that determines whether a string that contains only letters is an isogram.
+//     Assume the empty string is an isogram. Ignore letter case.
+//
+//     "Dermatoglyphics" --> true
+//     "aba" --> false
+//     "moOse" --> false (ignore letter casing)
+
+    const isIsogram = str => {
+        return !str.toLowerCase()
+            .split("")
+            .find((letter, i, arr) =>
+                arr.join("")
+                    .substring(i + 1)
+                    .split("")
+                    .some(item => item === letter))
+    }
+
+    console.log("isIsogram = ", isIsogram("moOse"));
 
 
     return (
