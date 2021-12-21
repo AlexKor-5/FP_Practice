@@ -93,13 +93,17 @@ export const MyApp = () => {
 //     "the-stealth-warrior" gets converted to "theStealthWarrior"
 //     "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 
+    // const toCamelCase = str =>
+    //     str.split(/[^a-zA-Z]/gi)
+    //         .map((w, i) => i > 0 ? w[0].toUpperCase() + w.substring(1) : w)
+    //         .join("")
+    //
+
     const toCamelCase = str =>
-        str.split(/[^a-zA-Z]/gi)
-            .map((w, i) => i > 0 ? w[0].toUpperCase() + w.substring(1) : w)
-            .join("")
+        str.replace(/[_-]\w/gi, ch => ch[1].toUpperCase());
 
 
-    // console.log(toCamelCase("the-stealth-warrior"));
+    console.log(toCamelCase("The-stealth-warrior"));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.

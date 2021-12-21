@@ -8,8 +8,8 @@ const destination = document.querySelector("#container");
 
 ReactDOM.render(
     <>
-        {/*<MyApp/>*/}
-        <MySecondApp/>
+        <MyApp/>
+        {/*<MySecondApp/>*/}
     </>,
     destination
 );
