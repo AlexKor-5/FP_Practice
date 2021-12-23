@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="toCamelCase Advanced">
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="isIsogram">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +31,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../my-fp-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.showMyStudent.returns clean input (1)">
+  <component name="RunManager" selected="Jest.showMyStudent.returns joined value">
+    <configuration name="showMyStudent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" />
+      <test-names>
+        <test-name value="showMyStudent" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="showMyStudent.returns clean input (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -65,8 +80,39 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="showMyStudent.returns founded student" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" />
+      <test-names>
+        <test-name value="showMyStudent" />
+        <test-name value="returns founded student" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="showMyStudent.returns joined value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/MySecondApp/MySecondApp.test.js" />
+      <test-names>
+        <test-name value="showMyStudent" />
+        <test-name value="returns joined value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.showMyStudent.returns joined value" />
+        <item itemvalue="Jest.showMyStudent" />
+        <item itemvalue="Jest.showMyStudent.returns founded student" />
         <item itemvalue="Jest.showMyStudent.returns clean input (1)" />
         <item itemvalue="Jest.showMyStudent.returns clean input" />
       </list>
@@ -88,7 +134,9 @@
       <workItem from="1639749271640" duration="4670000" />
       <workItem from="1640008705668" duration="113000" />
       <workItem from="1640012077180" duration="1065000" />
-      <workItem from="1640095172373" duration="11502000" />
+      <workItem from="1640095172373" duration="11932000" />
+      <workItem from="1640181317065" duration="2953000" />
+      <workItem from="1640243324152" duration="7140000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -139,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640102490144</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="isIsogram">
+      <created>1640107346149</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640107346149</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +220,7 @@
     <MESSAGE value="TypeError: Cannot set property 'innerHTML' of null" />
     <MESSAGE value="Updated! TypeError: Cannot set property 'innerHTML' of null" />
     <MESSAGE value="toCamelCase Advanced" />
-    <option name="LAST_COMMIT_MESSAGE" value="toCamelCase Advanced" />
+    <MESSAGE value="isIsogram" />
+    <option name="LAST_COMMIT_MESSAGE" value="isIsogram" />
   </component>
 </project>

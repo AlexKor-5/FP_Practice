@@ -1,9 +1,14 @@
 import React from "react";
-import {curry, compose, tap, props} from "ramda"
+import ReactDOM from "react-dom";
+import {curry, compose, tap, props, partial} from "ramda"
 import Maybe from "../../monads/Maybe/Maybe";
 import IO from "../../monads/IO/IO"
 import Either from "../../monads/Either/Either";
 import db from "../../fakeDB/fakeDB"
+
+const trim = (str) => str.replace(/^\s*|\s*$/g, '');
+const normalize = (str) => str.replace(/-/g, '-');
+export const cleanInput = compose(normalize, trim);
 
 const map = curry((f, container) => {
     return container.map(f);
@@ -21,45 +26,40 @@ const safeFindObject = curry((db, id) => {
     return val ? Either.right(val) : Either.left('Object not found with id: ' + id)
 });
 
-const findStudent = safeFindObject(db);
+export const findStudent = safeFindObject(db);
 
-const csv = arr => arr.join(',');
+export const csv = arr => arr.join(',');
 
 
 const debugLog = console.log
 const errorLog = console.error
 
-
-const trim = (str) => str.replace(/^\s*|\s*$/g, '');
-const normalize = (str) => str.replace(/-/g, '-');
-export const cleanInput = compose(normalize, trim);
-
 const trace = curry((msg, val) => debugLog(msg + ':' + val));
 
-const append = curry((elementId, info) => {
-    document.querySelector(elementId).innerHTML = info.orElse(errorLog);
+const container = partial((document, elementId) => document.querySelector(elementId), [document])
+// console.log(container('#student-name'));
+
+const append = curry((container, errorLog, elementId, info) => {
+    container('#student-name').innerHTML = info.orElse(errorLog);
     return info;
-});
+})(container)(errorLog)
 
 const liftIO = val => IO.of(val)
 
 const showMyStudent = compose(
     map(append('#student-name')),
-    tap(trace('Data before append = ')),
     liftIO,
     map(csv),
     map(props(['ssn', 'firstname', 'lastname'])),
-    tap(trace('Record fetched successfully!')),
     chain(findStudent),
-    tap(trace('Input was valid')),
     lift(cleanInput)
 );
 
-showMyStudent('444-44-4444').run()
-console.log("______________________________________TEST________________________________");
-// console.log(cleanInput(' 444-44-4444 '));
-
 export const MySecondApp = () => {
+    // console.log("______________________________________TEST________________________________");
+// console.log(cleanInput(' 444-44-4444 '));
+    showMyStudent('444-44-4444').run()
+
     return (
         <h1>MySecondApp</h1>
     )
