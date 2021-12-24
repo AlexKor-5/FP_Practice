@@ -121,8 +121,7 @@ export const MyApp = () => {
 //     maskify("Nananananananananananananananana Batman!") == "####################################man!"
 
     const maskify = (cc) =>
-        cc.slice(0, -4)
-            .replace(/./g, '#') + cc.slice(-4);
+        cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
 
 
     // console.log(maskify("4556364607935616"));
@@ -181,8 +180,31 @@ export const MyApp = () => {
                     .some(item => item === letter))
     }
 
-    console.log("isIsogram = ", isIsogram("moOse"));
+    // console.log("isIsogram = ", isIsogram("moOse"));
 
+    function isIsogramm(str) {
+        return !/(\w).*\1/i.test(str)
+    }
+
+    function isIsograme(str) {
+        return str.match(/([a-z]).*\1/i)
+    }
+
+    // console.log(isIsograme("moOse"));
+
+
+    // console.log(isIsogramm("moOse"));
+    // console.log("mose".match(/(\w).*\1/i))
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // a "witch" and her "broom" is one  -> change "" into ``
+    const changeQuotationMark = str =>
+        str.match(/".+?"/g)
+            .join(" ")
+            .replace(/"/gi, "`")
+            .split(" ")
+            // .map((word,i)=>str.replace(//))
+
+    console.log(changeQuotationMark(`a "witch" and her "broom" is one`));
 
     return (
         <h1>Included!</h1>
