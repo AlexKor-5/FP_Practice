@@ -196,15 +196,31 @@ export const MyApp = () => {
     // console.log(isIsogramm("moOse"));
     // console.log("mose".match(/(\w).*\1/i))
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // a "witch" and her "broom" is one  -> change "" into ``
-    const changeQuotationMark = str =>
-        str.match(/".+?"/g)
-            .join(" ")
-            .replace(/"/gi, "`")
-            .split(" ")
-            // .map((word,i)=>str.replace(//))
+    //To be a senior, a member must be at least 55 years old and have a handicap greater than 7.
+    // In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
 
-    console.log(changeQuotationMark(`a "witch" and her "broom" is one`));
+    // input =  [(18, 20), (45, 2), (61, 12), (37, 6), (21, 21), (78, 9)]
+    // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+    const openOrSenior = (data) =>
+        data.map(person => person[0] >= 55 ? ["Senior", person[1]] : ["Open", person[1]])
+            .map(person => person[1] > 7 ? [person[0], "Senior"] : [person[0], "Open"])
+            .map(person => person[0] === "Senior" && person[1] === "Senior" ? "Senior" : "Open")
+
+    console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+
+    // Optimized
+    const openOrSeniorNew = data =>
+        data.map(([year, handicaps]) => (year > 55 && handicaps > 7) ? "Senior" : "Open")
+
+    console.log(openOrSeniorNew([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+
+    // const change = str =>
+    //     str.replace(/\(/g, "[")
+    //         .replace(/\)/g, "]")
+    //
+    // console.log(change(old));
+
 
     return (
         <h1>Included!</h1>

@@ -9,9 +9,9 @@ const destination = document.querySelector("#container");
 
 ReactDOM.render(
     <>
-        {/*<MyApp/>*/}
+        <MyApp/>
         {/*<MySecondApp/>*/}
-        <OptimizationOne/>
+        {/*<OptimizationOne/>*/}
     </>,
     destination
 );
