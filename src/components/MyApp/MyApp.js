@@ -207,20 +207,35 @@ export const MyApp = () => {
             .map(person => person[1] > 7 ? [person[0], "Senior"] : [person[0], "Open"])
             .map(person => person[0] === "Senior" && person[1] === "Senior" ? "Senior" : "Open")
 
-    console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+    // console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
 
     // Optimized
     const openOrSeniorNew = data =>
         data.map(([year, handicaps]) => (year > 55 && handicaps > 7) ? "Senior" : "Open")
 
-    console.log(openOrSeniorNew([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+    // console.log(openOrSeniorNew([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
 
     // const change = str =>
     //     str.replace(/\(/g, "[")
     //         .replace(/\)/g, "]")
     //
     // console.log(change(old));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     Make a program that filters a list of strings and returns a list with only your friends name in it.
+//
+//         If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours!
+//         Otherwise, you can be sure he's not...
+//
+//     Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+//
+//     i.e.
+//
+//         friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 
+    const friend = friends => friends.filter(friend => /^\w\w\w\w$/i.test(friend))
+
+    console.log(friend(["Ryan", "Kieran", "Mark"]));
+    // console.log(/^\w\w\w\w$/i.test("Kiery"))
 
     return (
         <h1>Included!</h1>
