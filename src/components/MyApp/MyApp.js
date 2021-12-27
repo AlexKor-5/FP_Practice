@@ -3,7 +3,23 @@ import * as R from 'ramda'
 import * as _ from 'lodash'
 import Maybe from "../../monads/Maybe/Maybe";
 import Either from "../../monads/Either/Either";
-import {when, lt, always, __, complement, isNil, ifElse, is, partial, curry, toLower, split, join, tap} from 'ramda'
+import {
+    when,
+    lt,
+    always,
+    __,
+    complement,
+    isNil,
+    ifElse,
+    is,
+    partial,
+    curry,
+    toLower,
+    split,
+    join,
+    tap,
+    compose
+} from 'ramda'
 
 export const MyApp = () => {
 
@@ -159,6 +175,22 @@ export const MyApp = () => {
         return res
     }
 
+    const moreEqualFour = names => names.length >= 4 ?
+        `${names[0]}, ${names[1]} and ${names.length - 2} others like this` : names
+
+    const equalThree = names => names.length === 3 ?
+        `${names[0]}, ${names[1]} and ${names[2]} like this` : names
+
+    const equalTwo = names => names.length === 2 ?
+        `${names[0]} and ${names[1]} like this` : names
+
+    const equalOne = names => names.length === 1 ? `${names[0]} likes this` : names
+
+    const equalZero = names => names.length === 0 ? `no one likes this` : names
+
+    const likes2 = compose(equalZero, equalOne, equalTwo, equalThree, moreEqualFour)
+    //console.log(likes2(["Alex", "Jacob", "Mark", "Max"]));
+
     // console.log("likes = ", likes(["Alex", "Jacob", "Mark", "Max"]));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -234,8 +266,21 @@ export const MyApp = () => {
 
     const friend = friends => friends.filter(friend => /^\w\w\w\w$/i.test(friend))
 
-    console.log(friend(["Ryan", "Kieran", "Mark"]));
+    // console.log(friend(["Ryan", "Kieran", "Mark"]));
     // console.log(/^\w\w\w\w$/i.test("Kiery"))
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     Complete the solution so that the function will break up camel casing, using a space between words.
+//
+//         Example
+//     "camelCasing"  =>  "camel Casing"
+//     "identifier"   =>  "identifier"
+//     ""             =>  ""
+
+
+    const solution = string => string.replace(/[A-Z]/g, n => " " + n)
+
+    // console.log(solution("camelCasingTest"));
+
 
     return (
         <h1>Included!</h1>
