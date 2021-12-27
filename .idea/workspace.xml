@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="filtering task">
-      <change afterPath="$PROJECT_DIR$/src/components/Memoize/Memoize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/extensions/memoize.js" afterDir="false" />
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="memoize function (src/components/Memoize)(src/extensions/memoize.js)">
+      <change afterPath="$PROJECT_DIR$/src/utilities/timer/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Memoize/Memoize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Memoize/Memoize.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,7 @@
       <workItem from="1640181317065" duration="2953000" />
       <workItem from="1640243324152" duration="12031000" />
       <workItem from="1640334279848" duration="10181000" />
-      <workItem from="1640597986257" duration="3802000" />
+      <workItem from="1640597986257" duration="7227000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -225,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640345512983</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="memoize function (src/components/Memoize)(src/extensions/memoize.js)">
+      <created>1640602907486</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1640602907486</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +261,7 @@
     <MESSAGE value="Calculate function run time (src/components/OptimizationOne) ex" />
     <MESSAGE value="Array changing task" />
     <MESSAGE value="filtering task" />
-    <option name="LAST_COMMIT_MESSAGE" value="filtering task" />
+    <MESSAGE value="memoize function (src/components/Memoize)(src/extensions/memoize.js)" />
+    <option name="LAST_COMMIT_MESSAGE" value="memoize function (src/components/Memoize)(src/extensions/memoize.js)" />
   </component>
 </project>
