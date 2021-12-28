@@ -1,10 +1,31 @@
 import React from "react";
 import getJSON from "../../services/getJSON/getJSON";
-import {filter, sortBy, prop, map, tap, pluck, head, divide, sum, length, compose, mergeAll, curry} from "ramda"
+import {
+    filter,
+    sortBy,
+    prop,
+    map,
+    tap,
+    pluck,
+    head,
+    divide,
+    sum,
+    length,
+    compose,
+    mergeRight,
+    curry,
+    props,
+    join,
+} from "ramda"
 import IO from "../../monads/IO/IO"
 
 const fork = (join, f1, f2) => val => join(f1(val), f2(val))
 const trace = curry((msg, val) => console.log(msg + ':' + val));
+
+const append = curry((elementId, info) => {
+    document.querySelector(elementId).innerHTML = info;
+    return info;
+});
 
 const result = getJSON('https://61cad4fd194ffe0017788980.mockapi.io/students')
     .then(json => json)
@@ -17,10 +38,11 @@ const result = getJSON('https://61cad4fd194ffe0017788980.mockapi.io/students')
             .then(head)
             .then(compose(Math.ceil, fork(divide, sum, length)))
             .then(grade => {
-                return IO.of(mergeAll(student, {grade: grade}))
-                    // .map(tap(trace('o = ')))
+                return IO.of(mergeRight(student, {grade: grade}))
+                    .map(props(["name", "ssn", "grade"]))
+                    .map(join(","))
+                    .map(console.log).run()
             })
-            // .then(tap(out => console.log(out)))
             .catch(e => console.error(e))
     }))
     .catch(e => console.error(e))
