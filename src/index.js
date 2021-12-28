@@ -5,21 +5,23 @@ import ReactDOM from "react-dom";
 // import "./index.css";
 
 // extension
-import "./extensions/memoize"
+import "./extensions/memoize/memoize"
 
 import {MyApp} from "./components/MyApp/MyApp";
 import {MySecondApp} from "./components/MySecondApp/MySecondApp.jsx";
-import {Memoize} from "./components/Memoize/Memoize";
+import {AsyncHandling} from "./components/AsyncHandling/AsyncHandling";
+// import {Memoize} from "./components/Memoize/Memoize";
 // import {OptimizationOne} from "./components/OptimizationOne/OptimizationOne";
 
 const destination = document.querySelector("#container");
 
 ReactDOM.render(
     <>
-        {/*<MyApp/>*/}
+        <MyApp/>
         {/*<MySecondApp/>*/}
         {/*<OptimizationOne/>*/}
-        <Memoize/>
+        {/*<Memoize/>*/}
+        <AsyncHandling/>
     </>,
     destination
 );

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="memoize function (src/components/Memoize)(src/extensions/memoize.js)">
-      <change afterPath="$PROJECT_DIR$/src/utilities/timer/timer.js" afterDir="false" />
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="timer (src/utilities/timer)">
+      <change afterPath="$PROJECT_DIR$/src/components/AsyncHandling/AsyncHandling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/getJSON/getJSON.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Memoize/Memoize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Memoize/Memoize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyApp/MyApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extensions/memoize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/extensions/memoize/memoize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,11 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\FP\FP_Practice\practice-1\src\extensions\memoize" />
+    </key>
   </component>
   <component name="RunManager" selected="Jest.showMyStudent.returns joined value">
     <configuration name="showMyStudent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -137,7 +145,8 @@
       <workItem from="1640181317065" duration="2953000" />
       <workItem from="1640243324152" duration="12031000" />
       <workItem from="1640334279848" duration="10181000" />
-      <workItem from="1640597986257" duration="7227000" />
+      <workItem from="1640597986257" duration="11489000" />
+      <workItem from="1640678388385" duration="7465000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -230,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640602907486</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="timer (src/utilities/timer)">
+      <created>1640606899355</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1640606899355</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +278,7 @@
     <MESSAGE value="Array changing task" />
     <MESSAGE value="filtering task" />
     <MESSAGE value="memoize function (src/components/Memoize)(src/extensions/memoize.js)" />
-    <option name="LAST_COMMIT_MESSAGE" value="memoize function (src/components/Memoize)(src/extensions/memoize.js)" />
+    <MESSAGE value="timer (src/utilities/timer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="timer (src/utilities/timer)" />
   </component>
 </project>
