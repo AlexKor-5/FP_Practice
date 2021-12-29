@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="Async FP (part 1) (src/components/AsyncHandling)">
+    <list default="true" id="fd056949-9c88-4403-b6a3-c89daaba7e7a" name="Changes" comment="Async FP (part 2) (src/components/AsyncHandling)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AsyncHandling/AsyncHandling.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AsyncHandling/AsyncHandling.js" afterDir="false" />
     </list>
@@ -142,7 +142,9 @@
       <workItem from="1640243324152" duration="12031000" />
       <workItem from="1640334279848" duration="10181000" />
       <workItem from="1640597986257" duration="11489000" />
-      <workItem from="1640678388385" duration="9320000" />
+      <workItem from="1640678388385" duration="9450000" />
+      <workItem from="1640760213854" duration="299000" />
+      <workItem from="1640760807810" duration="4020000" />
     </task>
     <task id="LOCAL-00001" summary="Updated prev task!">
       <created>1639582400209</created>
@@ -249,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640690457212</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Async FP (part 2) (src/components/AsyncHandling)">
+      <created>1640692287339</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640692287339</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +292,7 @@
     <MESSAGE value="memoize function (src/components/Memoize)(src/extensions/memoize.js)" />
     <MESSAGE value="timer (src/utilities/timer)" />
     <MESSAGE value="Async FP (part 1) (src/components/AsyncHandling)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Async FP (part 1) (src/components/AsyncHandling)" />
+    <MESSAGE value="Async FP (part 2) (src/components/AsyncHandling)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Async FP (part 2) (src/components/AsyncHandling)" />
   </component>
 </project>
